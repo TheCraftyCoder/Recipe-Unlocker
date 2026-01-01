@@ -18,7 +18,7 @@
     "unlocker.mixins.json"
   ],
   "depends": {
-    "java": ">=16",
-    "minecraft": ">=1.19.2"
+    "java": ">=21",
+    "minecraft": ">=1.21.8"
   }
 }

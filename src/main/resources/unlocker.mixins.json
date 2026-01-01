@@ -4,9 +4,13 @@
   "package": "me.declipsonator.recipeunlocker.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "ClientPlayerEntityMixin",
     "ClientPlayerInteractionManagerMixin",
     "ClientPlayNetworkHandlerMixin",
-    "RecipeBookWidgetMixin"
+    "MinecraftClientMixin",
+    "RecipeBookWidgetMixin",
+    "RecipeFinderAccessor",
+    "RecipeBookScreenAccessor"
   ],
   "client": [
   ],

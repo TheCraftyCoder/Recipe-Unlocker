@@ -1,28 +1,33 @@
 package me.declipsonator.recipeunlocker.util;
 
-import net.minecraft.recipe.Recipe;
-import net.minecraft.recipe.RecipeEntry;
+import net.minecraft.recipe.NetworkRecipeId;
+import net.minecraft.recipe.RecipeDisplayEntry;
 
-import java.util.HashSet;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Set;
+import java.util.Map;
 
 public class RecipeBookRecipes {
-	private static final Set<Recipe<?>> RECIPES = new HashSet<>();
+	private static final Map<NetworkRecipeId, RecipeDisplayEntry> RECIPES = new HashMap<>();
 
-	public static boolean isCached(Recipe<?> recipe) {
-		return RECIPES.contains(recipe);
+	public static boolean isCached(NetworkRecipeId recipeId) {
+		return RECIPES.containsKey(recipeId);
 	}
 
-	public static void setRecipes(List<RecipeEntry<?>> recipeCache) {
+	public static RecipeDisplayEntry get(NetworkRecipeId recipeId) {
+		return RECIPES.get(recipeId);
+	}
+
+	public static void setRecipes(List<RecipeDisplayEntry> recipeCache) {
+		RECIPES.clear();
 		recipeCache.forEach(RecipeBookRecipes::addRecipe);
 	}
 
-	public static void addRecipe(RecipeEntry<?> recipe) {
-		RECIPES.add(recipe.value());
+	public static void addRecipe(RecipeDisplayEntry recipe) {
+		RECIPES.put(recipe.id(), recipe);
 	}
 
-	public static void removeRecipeFromCache(RecipeEntry<?> recipe) {
-		RECIPES.remove(recipe.value());
+	public static void removeRecipeFromCache(NetworkRecipeId recipeId) {
+		RECIPES.remove(recipeId);
 	}
 }
