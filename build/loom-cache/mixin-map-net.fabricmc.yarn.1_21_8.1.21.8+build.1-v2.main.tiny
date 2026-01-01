@@ -1,6 +1,0 @@
-v1	named	intermediary
-FIELD	me/declipsonator/recipeunlocker/mixin/ClientPlayerEntityMixin	Z	limitedCraftingEnabled	field_46188
-FIELD	me/declipsonator/recipeunlocker/mixin/ClientPlayerInteractionManagerMixin	Lnet/minecraft/client/MinecraftClient;	client	field_3712
-FIELD	me/declipsonator/recipeunlocker/mixin/ClientPlayNetworkHandlerMixin	Lnet/minecraft/client/recipebook/ClientRecipeManager;	recipeManager	field_54850
-FIELD	me/declipsonator/recipeunlocker/mixin/MinecraftClientMixin	Lnet/minecraft/client/network/ClientPlayerEntity;	player	field_1724
-METHOD	me/declipsonator/recipeunlocker/mixin/MinecraftClientMixin	()Lnet/minecraft/server/integrated/IntegratedServer;	getServer	method_1576
