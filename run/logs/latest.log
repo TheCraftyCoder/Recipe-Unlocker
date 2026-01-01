@@ -1,0 +1,78 @@
+[14:19:17] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.21.8 with Fabric Loader 0.15.11
+[14:19:17] [main/INFO] (FabricLoader) Loading 5 mods:
+	- fabricloader 0.15.11
+	- java 21
+	- minecraft 1.21.8
+	- mixinextras 0.3.5
+	- recipe-unlocker 1.2
+[14:19:17] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/C:/Users/Tim/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.13.3+mixin.0.8.5/9527e6b0d2449408958fd1302594dc65ec5ade9c/sponge-mixin-0.13.3+mixin.0.8.5.jar Service=Knot/Fabric Env=CLIENT
+[14:19:17] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[14:19:17] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[14:19:19] [Datafixer Bootstrap/INFO] (Minecraft) 269 Datafixer optimizations took 415 milliseconds
+[14:19:24] [main/INFO] (FabricLoader/MixinExtras|Service) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.5).
+[14:19:25] [Render thread/INFO] (Minecraft) Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[14:19:25] [Render thread/INFO] (Minecraft) Setting user: Player24
+[14:19:25] [Render thread/INFO] (RecipeUnlocker) Initialized Recipe Unlocker.
+[14:19:25] [Render thread/INFO] (Minecraft) Backend library: LWJGL version 3.3.3-snapshot
+[14:19:26] [Render thread/INFO] (Minecraft) Using optional rendering extensions: GL_ARB_buffer_storage, GL_KHR_debug, GL_ARB_vertex_attrib_binding, GL_ARB_direct_state_access
+[14:19:26] [Render thread/INFO] (Minecraft) Reloading ResourceManager: vanilla
+[14:19:27] [Worker-Main-11/INFO] (Minecraft) Found unifont_pua-16.0.03.hex, loading
+[14:19:27] [Worker-Main-10/INFO] (Minecraft) Found unifont_all_no_pua-16.0.03.hex, loading
+[14:19:27] [Worker-Main-31/INFO] (Minecraft) Found unifont_jp_patch-16.0.03.hex, loading
+[14:19:28] [Render thread/INFO] (Minecraft) OpenAL initialized on device OpenAL Soft on Realtek Digital Output (Realtek(R) Audio)
+[14:19:28] [Render thread/INFO] (Minecraft) Sound engine started
+[14:19:28] [Render thread/INFO] (Minecraft) Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[14:19:28] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[14:19:28] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[14:19:28] [Render thread/INFO] (Minecraft) Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[14:19:28] [Render thread/INFO] (Minecraft) Created: 2048x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[14:19:28] [Render thread/INFO] (Minecraft) Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[14:19:28] [Render thread/INFO] (Minecraft) Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[14:19:28] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[14:19:28] [Render thread/INFO] (Minecraft) Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[14:19:28] [Render thread/INFO] (Minecraft) Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[14:19:28] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[14:19:28] [Render thread/INFO] (Minecraft) Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[14:19:28] [Render thread/INFO] (Minecraft) Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
+[14:19:34] [Render thread/INFO] (Minecraft) Loaded 1407 recipes
+[14:19:34] [Render thread/INFO] (Minecraft) Loaded 1520 advancements
+[14:19:34] [Server thread/INFO] (Minecraft) Starting integrated minecraft server version 1.21.8
+[14:19:34] [Server thread/INFO] (Minecraft) Generating keypair
+[14:19:34] [Server thread/INFO] (Minecraft) Preparing start region for dimension minecraft:overworld
+[14:19:35] [Render thread/INFO] (Minecraft) Preparing spawn area: 0%
+[14:19:35] [Render thread/INFO] (Minecraft) Preparing spawn area: 51%
+[14:19:35] [Render thread/INFO] (Minecraft) Time elapsed: 667 ms
+[14:19:35] [Server thread/INFO] (Minecraft) Changing view distance to 12, from 10
+[14:19:35] [Server thread/INFO] (Minecraft) Changing simulation distance to 12, from 0
+[14:19:36] [Server thread/INFO] (Minecraft) Player24[local:E:26757c47] logged in with entity id 72 at (14.345560867133418, 110.0, 8.854592443349404)
+[14:19:36] [Server thread/INFO] (Minecraft) Player24 joined the game
+[14:19:36] [Render thread/INFO] (Minecraft) Loaded 2 advancements
+[14:19:36] [Render thread/INFO] (Minecraft) Resizing Dynamic Transforms UBO, capacity limit of 2 reached during a single frame. New capacity will be 4.
+[14:19:37] [Render thread/INFO] (Minecraft) Resizing Dynamic Transforms UBO, capacity limit of 4 reached during a single frame. New capacity will be 8.
+[14:19:37] [Server thread/INFO] (RecipeUnlocker) Unlocked 0 recipes on integrated server.
+[14:19:37] [Render thread/INFO] (RecipeUnlocker) Integrated server recipe unlock completed.
+[14:19:37] [Render thread/INFO] (Minecraft) Resizing Dynamic Transforms UBO, capacity limit of 8 reached during a single frame. New capacity will be 16.
+[14:19:37] [Render thread/INFO] (Minecraft) Resizing Dynamic Transforms UBO, capacity limit of 16 reached during a single frame. New capacity will be 32.
+[14:19:37] [Render thread/INFO] (Minecraft) Resizing Dynamic Transforms UBO, capacity limit of 32 reached during a single frame. New capacity will be 64.
+[14:19:37] [Render thread/INFO] (Minecraft) Resizing Dynamic Transforms UBO, capacity limit of 64 reached during a single frame. New capacity will be 128.
+[14:19:37] [Render thread/INFO] (Minecraft) Resizing Dynamic Transforms UBO, capacity limit of 128 reached during a single frame. New capacity will be 256.
+[14:19:37] [Render thread/INFO] (Minecraft) Resizing Dynamic Transforms UBO, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[14:19:38] [Render thread/INFO] (Minecraft) Resizing Dynamic Transforms UBO, capacity limit of 512 reached during a single frame. New capacity will be 1024.
+[14:19:43] [Server thread/INFO] (Minecraft) Saving and pausing game...
+[14:19:43] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[14:19:43] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[14:19:43] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[14:19:43] [Server thread/INFO] (Minecraft) Player24 lost connection: Disconnected
+[14:19:43] [Server thread/INFO] (Minecraft) Player24 left the game
+[14:19:43] [Server thread/INFO] (Minecraft) Stopping singleplayer server as player logged out
+[14:19:44] [Server thread/INFO] (Minecraft) Stopping server
+[14:19:44] [Server thread/INFO] (Minecraft) Saving players
+[14:19:44] [Server thread/INFO] (Minecraft) Saving worlds
+[14:19:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[14:19:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[14:19:44] [Server thread/INFO] (Minecraft) Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[14:19:44] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (New World): All chunks are saved
+[14:19:44] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[14:19:44] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[14:19:44] [Server thread/INFO] (Minecraft) ThreadedAnvilChunkStorage: All dimensions are saved
+[14:19:45] [Render thread/INFO] (Minecraft) Stopping!

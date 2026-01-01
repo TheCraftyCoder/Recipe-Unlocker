@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "recipe-unlocker",
+  "version": "1.2",
+  "name": "Recipe Unlocker",
+  "description": "Unlocks all of the recipes in the Minecraft crafting table.",
+  "authors": [
+    "Declipsonator"
+  ],
+  "icon": "assets/recipeunlocker/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "me.declipsonator.recipeunlocker.RecipeUnlocker"
+    ]
+  },
+  "mixins": [
+    "unlocker.mixins.json"
+  ],
+  "depends": {
+    "java": ">=21",
+    "minecraft": ">=1.21.8"
+  }
+}
