@@ -1,0 +1,32 @@
+### Gradle ###
+.gradle/
+build/
+out/
+
+### Fabric/Loom / dev-run ###
+run/
+bin/
+build/libs/
+build/devlibs/
+
+### IDEs ###
+.idea/
+.vscode/
+*.iml
+
+### OS ###
+.DS_Store
+Thumbs.db
+
+### Java ###
+*.class
+*.jar
+*.log
+
+### Mapping / caches ###
+mappings/
+.mappings/
+
+### Misc ###
+tmp/
+logs/
