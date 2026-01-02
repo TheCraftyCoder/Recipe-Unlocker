@@ -243,27 +243,11 @@ public abstract class ClientPlayerInteractionManagerMixin implements RecipeGridA
 
 		ItemStack itemStack = inventory.getStack(itemStackSlot);
 
-
-		if (i <= itemStack.getCount()) {
-//			inventory.removeStack(j, i);
-			MoveUtils.pickup(itemStackSlot, i);
-
-			k = i;
-		} else {
-//			inventory.removeStack(j);
-			MoveUtils.pickupAll(itemStackSlot);
-			k = client.player.currentScreenHandler.getCursorStack().getCount();
-
-		}
-		if (slot.getStack().isEmpty()) {
-//			slot.setStackNoCallbacks(itemStack.copyWithCount(k));
-			MoveUtils.putId(slot.id, k);
-		} else {
-//			slot.getStack().increment(k);
-			MoveUtils.putAllId(slot.id);
-
-		}
-		return i - k;
+		// Use efficient transfer to prevent packet spam/desyncs
+		int amountToMove = Math.min(i, itemStack.getCount());
+		MoveUtils.transfer(itemStackSlot, slot.id, amountToMove);
+		
+		return i - amountToMove;
 	}
 
 	@Unique

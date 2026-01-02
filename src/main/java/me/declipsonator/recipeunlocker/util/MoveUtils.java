@@ -91,7 +91,27 @@ public class MoveUtils {
         click(id, 0);
     }
 
+    /**
+     * Transfers a specific amount of items from a source slot (by index) to a target slot (by ID).
+     * Uses efficient clicking to minimize packets and prevent desyncs.
+     */
+    public static void transfer(int sourceIndex, int targetId, int amount) {
+        int sourceId = indexToId(sourceIndex);
+        if (sourceId == -1) return;
 
+        // 1. Pick up everything from source (Left Click)
+        click(sourceId, 0);
+
+        // 2. Place 'amount' items into target (Right Click 'amount' times)
+        // Note: Right click places 1 item from cursor.
+        for (int i = 0; i < amount; i++) {
+            click(targetId, 1);
+        }
+
+        // 3. Place remainder back into source (Left Click)
+        // If source is empty (which it is, because we picked it all up), Left Click places all back.
+        click(sourceId, 0);
+    }
 
     private static void click(int id, int button) {
         mc.interactionManager.clickSlot(mc.player.currentScreenHandler.syncId, id, button, SlotActionType.PICKUP, mc.player);
