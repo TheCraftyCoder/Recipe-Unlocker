@@ -6,6 +6,7 @@ import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.recipe.ServerRecipeManager;
 import net.minecraft.server.integrated.IntegratedServer;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.network.ServerRecipeBook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.spongepowered.asm.mixin.Mixin;
@@ -77,9 +78,20 @@ public abstract class MinecraftClientMixin {
 
 			ServerRecipeManager recipeManager = server.getRecipeManager();
 			Collection<RecipeEntry<?>> allRecipes = recipeManager.values();
-			int unlocked = serverPlayer.getRecipeBook().unlockRecipes(allRecipes, serverPlayer);
+			ServerRecipeBook recipeBook = serverPlayer.getRecipeBook();
+			
+			// Force-unlock every recipe by directly calling unlock() for each one.
+			// This bypasses the "already unlocked" check that unlockRecipes() does.
+			int count = 0;
+			for (RecipeEntry<?> entry : allRecipes) {
+				recipeBook.unlock(entry.id());
+				count++;
+			}
+			
+			// Re-send the full recipe book to the client so it receives all display entries.
+			recipeBook.sendInitRecipesPacket(serverPlayer);
 
-			RECIPEUNLOCKER_LOGGER.info("Unlocked {} recipes on integrated server.", unlocked);
+			RECIPEUNLOCKER_LOGGER.info("Force-unlocked {} recipes on integrated server and re-sent to client.", count);
 			this.recipeunlocker$serverUnlockDone = true;
 		});
 	}

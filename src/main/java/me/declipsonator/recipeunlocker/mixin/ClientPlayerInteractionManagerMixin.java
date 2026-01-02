@@ -52,13 +52,19 @@ public abstract class ClientPlayerInteractionManagerMixin implements RecipeGridA
 
 	@Inject(method = "clickRecipe", at = @At("HEAD"), cancellable = true)
 	public void clickedRecipe(int syncId, NetworkRecipeId recipeId, boolean craftAll, CallbackInfo ci) {
-		if(!(RecipeUnlocker.mc.currentScreen instanceof HandledScreen<?> handledScreen && RecipeBookRecipes.isCached(recipeId) && RecipeUnlocker.mc.player != null)) return;
+		// Only handle recipes we have cached (i.e., recipes we've unlocked client-side)
+		if (!RecipeBookRecipes.isCached(recipeId)) {
+			// Let vanilla handle it - this recipe is legitimately unlocked on server
+			return;
+		}
+		
+		if (RecipeUnlocker.mc.player == null) return;
+		if (!(RecipeUnlocker.mc.currentScreen instanceof HandledScreen<?> handledScreen)) return;
+		
 		RecipeBookWidget widget = getRecipeBookWidget(handledScreen);
-		if(widget == null) return;
-		// widget.reset();
+		if (widget == null) return;
 
 		ClientPlayerEntity entity = RecipeUnlocker.mc.player;
-
 
 		im = MinecraftClient.getInstance().interactionManager;
 		if (!(RecipeUnlocker.mc.player.currentScreenHandler instanceof AbstractCraftingScreenHandler craftingHandler)) {
@@ -66,6 +72,10 @@ public abstract class ClientPlayerInteractionManagerMixin implements RecipeGridA
 		}
 		handler = craftingHandler;
 		inventory = entity.getInventory();
+
+		// Cancel vanilla behavior now - we're handling this recipe ourselves
+		// This prevents the server from receiving a click for a recipe it doesn't know about
+		ci.cancel();
 
 		if (!canReturnInputs() && !entity.isCreative()) {
 			return;
@@ -87,8 +97,6 @@ public abstract class ClientPlayerInteractionManagerMixin implements RecipeGridA
 			}
 		}
 		entity.getInventory().markDirty();
-
-		ci.cancel();
 	}
 
 	@Unique
